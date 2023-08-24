@@ -4,7 +4,6 @@ from sys import exit
 import random
 
 RETANGULO = 1
-CIRCULO = 0
 
 def lerp(value1, value2, factor):
     return value1+(value2 - value1)*factor
@@ -20,8 +19,6 @@ def blend(color1, color2, blend_fator = 0.1):
 def desenha_formas(params):
     if params['forma'] == RETANGULO:
         pygame.draw.rect(params['surface'],params['cor'],(params['x'],params['y'], params['height'], params['width']))
-    elif params['forma'] == CIRCULO:
-        pygame.draw.circle(params['surface'],params['cor'],params['center'],params['radius'])
 
 def desafio2():
     pygame.init()
